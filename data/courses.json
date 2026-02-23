@@ -1,0 +1,58 @@
+{
+    "courses": [
+        {
+            "courseId": 1,
+            "title": "Complete JavaScript Course - Beginner to Advanced",
+            "instructor": "John Smith",
+            "description": "Master JavaScript with projects, challenges and theory. Learn modern JavaScript from scratch!",
+            "level": "Beginner",
+            "duration": "24 hours",
+            "thumbnail": "https://placehold.co/600x400/F7DF1E/000000?text=JavaScript"
+        },
+        {
+            "courseId": 2,
+            "title": "React - The Complete Guide",
+            "instructor": "Sarah Johnson",
+            "description": "Learn React from the ground up with hooks, context, and Redux.",
+            "level": "Intermediate",
+            "duration": "32 hours",
+            "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React"
+        },
+        {
+            "courseId": 3,
+            "title": "Python for Data Science",
+            "instructor": "Michael Williams",
+            "description": "Complete Python bootcamp covering data analysis, visualization, and machine learning basics.",
+            "level": "Beginner",
+            "duration": "28 hours",
+            "thumbnail": "https://placehold.co/600x400/3776AB/FFFFFF?text=Python"
+        },
+        {
+            "courseId": 4,
+            "title": "Web Design Masterclass",
+            "instructor": "Emily Davis",
+            "description": "Learn HTML, CSS, and responsive design. Build beautiful websites from scratch.",
+            "level": "Beginner",
+            "duration": "18 hours",
+            "thumbnail": "https://placehold.co/600x400/E34F26/FFFFFF?text=Web+Design"
+        },
+        {
+            "courseId": 5,
+            "title": "Node.js & Express - Backend Development",
+            "instructor": "David Brown",
+            "description": "Build powerful REST APIs and backend applications with Node.js and Express.",
+            "level": "Intermediate",
+            "duration": "26 hours",
+            "thumbnail": "https://placehold.co/600x400/339933/FFFFFF?text=Node.js"
+        },
+        {
+            "courseId": 6,
+            "title": "SQL & Database Design",
+            "instructor": "Lisa Martinez",
+            "description": "Master SQL queries, database design, and work with MySQL and PostgreSQL.",
+            "level": "Beginner",
+            "duration": "16 hours",
+            "thumbnail": "https://placehold.co/600x400/4479A1/FFFFFF?text=SQL"
+        }
+    ]
+}
