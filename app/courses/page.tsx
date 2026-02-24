@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useCallback } from "react";
 import { Course } from "@/types/Course";
-import { ShadcnCard } from "@/components/ShadcnCard";
+import { ShadcnCourseCard } from "@/components/ShadcnCourseCard";
 
 export default function CoursesPage() {
   const [courses, setCourses] = useState<Course[]>([]);
@@ -27,7 +27,7 @@ export default function CoursesPage() {
       <h1 className="text-3xl font-bold mb-6">Available Courses</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map((course) => (
-          <ShadcnCard 
+          <ShadcnCourseCard 
             key={course.courseId} 
             course={course} 
             onActionComplete={fetchCourses} 

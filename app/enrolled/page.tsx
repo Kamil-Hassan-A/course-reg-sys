@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Course } from "@/types/Course";
-import { ShadcnCard } from "@/components/ShadcnCard";
+import { ShadcnCourseCard } from "@/components/ShadcnCourseCard";
 
 export default function EnrolledPage() {
   const [enrolledCourses, setEnrolledCourses] = useState<Course[]>([]);
@@ -39,7 +39,7 @@ export default function EnrolledPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {enrolledCourses.map((course) => (
-          <ShadcnCard
+          <ShadcnCourseCard
             key={course.courseId}
             course={course}
             actionType="unenroll"

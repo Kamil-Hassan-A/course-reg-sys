@@ -1,0 +1,188 @@
+{
+    "admin": {
+        "username": "admin",
+        "password": "admin123"
+    },
+    "courses": [
+        {
+            "courseId": 1,
+            "title": "Complete JavaScript Course - Beginner to Advanced",
+            "instructor": "John Smith",
+            "description": "Master JavaScript with projects, challenges and theory. Learn modern JavaScript from scratch!",
+            "level": "Beginner",
+            "duration": "24 hours",
+            "thumbnail": "https://placehold.co/600x400/F7DF1E/000000?text=JavaScript",
+            "enrolled": true
+        },
+        {
+            "courseId": 2,
+            "title": "React - The Complete Guide",
+            "instructor": "Sarah Johnson",
+            "description": "Learn React from the ground up with hooks, context, and Redux.",
+            "level": "Intermediate",
+            "duration": "32 hours",
+            "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React",
+            "enrolled": true
+        },
+        {
+            "courseId": 3,
+            "title": "Python for Data Science",
+            "instructor": "Michael Williams",
+            "description": "Complete Python bootcamp covering data analysis, visualization, and machine learning basics.",
+            "level": "Beginner",
+            "duration": "28 hours",
+            "thumbnail": "https://placehold.co/600x400/3776AB/FFFFFF?text=Python",
+            "enrolled": true
+        },
+        {
+            "courseId": 4,
+            "title": "Web Design Masterclass",
+            "instructor": "Emily Davis",
+            "description": "Learn HTML, CSS, and responsive design. Build beautiful websites from scratch.",
+            "level": "Beginner",
+            "duration": "18 hours",
+            "thumbnail": "https://placehold.co/600x400/E34F26/FFFFFF?text=Web+Design",
+            "enrolled": true
+        },
+        {
+            "courseId": 5,
+            "title": "Node.js & Express - Backend Development",
+            "instructor": "David Brown",
+            "description": "Build powerful REST APIs and backend applications with Node.js and Express.",
+            "level": "Intermediate",
+            "duration": "26 hours",
+            "thumbnail": "https://placehold.co/600x400/339933/FFFFFF?text=Node.js",
+            "enrolled": false
+        },
+        {
+            "courseId": 6,
+            "title": "SQL & Database Design",
+            "instructor": "Lisa Martinez",
+            "description": "Master SQL queries, database design, and work with MySQL and PostgreSQL.",
+            "level": "Beginner",
+            "duration": "16 hours",
+            "thumbnail": "https://placehold.co/600x400/4479A1/FFFFFF?text=SQL",
+            "enrolled": true
+        },
+        {
+            "courseId": 7,
+            "title": "TypeScript Fundamentals",
+            "instructor": "Alex Thompson",
+            "description": "Learn TypeScript from basics to advanced topics. Type-safe JavaScript development.",
+            "level": "Intermediate",
+            "duration": "20 hours",
+            "thumbnail": "https://placehold.co/600x400/3178C6/FFFFFF?text=TypeScript",
+            "enrolled": false
+        },
+        {
+            "courseId": 8,
+            "title": "Machine Learning with Python",
+            "instructor": "Dr. Jennifer Lee",
+            "description": "Dive into machine learning algorithms, neural networks, and practical AI applications.",
+            "level": "Advanced",
+            "duration": "40 hours",
+            "thumbnail": "https://placehold.co/600x400/FF6F00/FFFFFF?text=Machine+Learning",
+            "enrolled": false
+        },
+        {
+            "courseId": 9,
+            "title": "Docker and Kubernetes Essentials",
+            "instructor": "Robert Chen",
+            "description": "Master containerization with Docker and orchestration with Kubernetes for modern DevOps.",
+            "level": "Intermediate",
+            "duration": "22 hours",
+            "thumbnail": "https://placehold.co/600x400/2496ED/FFFFFF?text=Docker+Kubernetes",
+            "enrolled": false
+        },
+        {
+            "courseId": 10,
+            "title": "Vue.js Complete Course",
+            "instructor": "Maria Garcia",
+            "description": "Build modern web applications with Vue.js 3, Composition API, and state management.",
+            "level": "Intermediate",
+            "duration": "28 hours",
+            "thumbnail": "https://placehold.co/600x400/42B883/FFFFFF?text=Vue.js",
+            "enrolled": false
+        },
+        {
+            "courseId": 11,
+            "title": "GraphQL API Development",
+            "instructor": "James Wilson",
+            "description": "Learn to build and consume GraphQL APIs. Modern alternative to REST.",
+            "level": "Advanced",
+            "duration": "18 hours",
+            "thumbnail": "https://placehold.co/600x400/E10098/FFFFFF?text=GraphQL",
+            "enrolled": false
+        },
+        {
+            "courseId": 12,
+            "title": "Mobile App Development with React Native",
+            "instructor": "Sophie Anderson",
+            "description": "Create cross-platform mobile apps for iOS and Android using React Native.",
+            "level": "Intermediate",
+            "duration": "35 hours",
+            "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React+Native",
+            "enrolled": false
+        },
+        {
+            "courseId": 13,
+            "title": "Cybersecurity Fundamentals",
+            "instructor": "Mark Patterson",
+            "description": "Understanding security threats, encryption, network security, and ethical hacking basics.",
+            "level": "Beginner",
+            "duration": "25 hours",
+            "thumbnail": "https://placehold.co/600x400/00A4EF/FFFFFF?text=Cybersecurity",
+            "enrolled": false
+        },
+        {
+            "courseId": 14,
+            "title": "AWS Cloud Practitioner",
+            "instructor": "Rachel Kim",
+            "description": "Master Amazon Web Services fundamentals, EC2, S3, Lambda, and cloud architecture.",
+            "level": "Beginner",
+            "duration": "30 hours",
+            "thumbnail": "https://placehold.co/600x400/FF9900/000000?text=AWS+Cloud",
+            "enrolled": false
+        },
+        {
+            "courseId": 15,
+            "title": "Advanced CSS and Sass",
+            "instructor": "Daniel Brown",
+            "description": "Master CSS Grid, Flexbox, animations, and Sass preprocessor for modern web design.",
+            "level": "Intermediate",
+            "duration": "20 hours",
+            "thumbnail": "https://placehold.co/600x400/CC6699/FFFFFF?text=CSS+Sass",
+            "enrolled": false
+        },
+        {
+            "courseId": 16,
+            "title": "MongoDB - The Complete Developer's Guide",
+            "instructor": "Thomas Miller",
+            "description": "Learn NoSQL database design, CRUD operations, aggregation, and MongoDB Atlas.",
+            "level": "Beginner",
+            "duration": "22 hours",
+            "thumbnail": "https://placehold.co/600x400/47A248/FFFFFF?text=MongoDB",
+            "enrolled": false
+        },
+        {
+            "courseId": 17,
+            "title": "Git and GitHub Masterclass",
+            "instructor": "Laura Martinez",
+            "description": "Version control with Git, collaboration with GitHub, branching strategies, and workflows.",
+            "level": "Beginner",
+            "duration": "12 hours",
+            "thumbnail": "https://placehold.co/600x400/F05032/FFFFFF?text=Git+GitHub",
+            "enrolled": false
+        },
+        {
+            "courseId": 18,
+            "title": "Next.js and Server-Side Rendering",
+            "instructor": "Kevin Zhang",
+            "description": "Build production-ready React applications with Next.js, SSR, and static generation.",
+            "level": "Advanced",
+            "duration": "26 hours",
+            "thumbnail": "https://placehold.co/600x400/000000/FFFFFF?text=Next.js",
+            "enrolled": false
+        }
+    ]
+}

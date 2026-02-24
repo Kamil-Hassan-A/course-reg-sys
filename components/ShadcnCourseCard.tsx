@@ -18,10 +18,10 @@ interface ShadcnCardProps {
   actionType?: "enroll" | "unenroll";
 }
 
-export function ShadcnCard({ 
-  course, 
+export function ShadcnCourseCard({
+  course,
   onActionComplete,
-  actionType = "enroll" 
+  actionType = "enroll",
 }: ShadcnCardProps) {
   const [isLoading, setIsLoading] = useState(false);
 
@@ -78,7 +78,11 @@ export function ShadcnCard({
   const buttonConfig = {
     enroll: {
       onClick: handleEnroll,
-      text: isLoading ? "Enrolling..." : course.enrolled ? "Already Enrolled" : "Enroll Now",
+      text: isLoading
+        ? "Enrolling..."
+        : course.enrolled
+        ? "Already Enrolled"
+        : "Enroll Now",
       variant: "default" as const,
       disabled: course.enrolled,
     },

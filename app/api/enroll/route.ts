@@ -6,7 +6,7 @@ import { Course } from "@/types/Course";
 // Get all enrolled courses
 export async function GET() {
   try {
-    const coursesPath = path.join(process.cwd(), "data/courses.json");
+    const coursesPath = path.join(process.cwd(), "data/db.json");
     const coursesData = fs.readFileSync(coursesPath, "utf-8");
     const coursesFile = JSON.parse(coursesData);
 

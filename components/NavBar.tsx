@@ -6,6 +6,7 @@ export default function NavBar() {
       <NavItem href="/" text="Home"></NavItem>
       <NavItem href="/courses" text="Browse Courses"></NavItem>
       <NavItem href="/enrolled" text="My Courses"></NavItem>
+      <NavItem href="/admin/dashboard" text="Admin"></NavItem>
     </nav>
   );
 }

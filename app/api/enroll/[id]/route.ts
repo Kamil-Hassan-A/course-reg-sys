@@ -19,12 +19,12 @@ export async function POST(
       );
     }
 
-    const coursesPath = path.join(process.cwd(), "data/courses.json");
-    const coursesData = fs.readFileSync(coursesPath, "utf-8");
-    const coursesFile = JSON.parse(coursesData);
+    const dbPath = path.join(process.cwd(), "data/db.json");
+    const dbData = fs.readFileSync(dbPath, "utf-8");
+    const db = JSON.parse(dbData);
 
     // Find the course
-    const course = coursesFile.courses.find(
+    const course = db.courses.find(
       (c: Course) => c.courseId === courseId
     );
 
@@ -46,7 +46,7 @@ export async function POST(
     // Set enrolled to true
     course.enrolled = true;
 
-    fs.writeFileSync(coursesPath, JSON.stringify(coursesFile, null, 2));
+    fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
 
     return NextResponse.json({
       message: "Successfully enrolled!",
@@ -77,12 +77,12 @@ export async function DELETE(
       );
     }
 
-    const coursesPath = path.join(process.cwd(), "data/courses.json");
-    const coursesData = fs.readFileSync(coursesPath, "utf-8");
-    const coursesFile = JSON.parse(coursesData);
+    const dbPath = path.join(process.cwd(), "data/db.json");
+    const dbData = fs.readFileSync(dbPath, "utf-8");
+    const db = JSON.parse(dbData);
 
     // Find the course
-    const course = coursesFile.courses.find(
+    const course = db.courses.find(
       (c: Course) => c.courseId === courseId
     );
 
@@ -96,7 +96,7 @@ export async function DELETE(
     // Set enrolled to false
     course.enrolled = false;
 
-    fs.writeFileSync(coursesPath, JSON.stringify(coursesFile, null, 2));
+    fs.writeFileSync(dbPath, JSON.stringify(db, null, 2));
 
     return NextResponse.json({
       message: "Successfully unenrolled from course",
