@@ -37,6 +37,13 @@ export function ShadcnCourseForm({ onCourseAdded }: ShadcnCourseFormProps) {
     description: "",
     level: "Beginner",
     duration: "",
+    category: "",
+    rating: "4.5",
+    students: "1000",
+    prerequisites: "",
+    syllabus: "",
+    language: "English",
+    certificate: true,
   });
 
   const handleInputChange = (
@@ -58,13 +65,29 @@ export function ShadcnCourseForm({ onCourseAdded }: ShadcnCourseFormProps) {
 
     try {
       const token = localStorage.getItem("adminToken");
+      
+      const courseData = {
+        ...formData,
+        rating: parseFloat(formData.rating),
+        students: parseInt(formData.students),
+        prerequisites: formData.prerequisites
+          .split(",")
+          .map((item) => item.trim())
+          .filter((item) => item !== ""),
+        syllabus: formData.syllabus
+          .split(",")
+          .map((item) => item.trim())
+          .filter((item) => item !== ""),
+        lastUpdated: new Date().toISOString().split("T")[0], // YYYY-MM-DD format
+      };
+
       const response = await fetch("/api/courses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(courseData),
       });
 
       const data = await response.json();
@@ -77,6 +100,13 @@ export function ShadcnCourseForm({ onCourseAdded }: ShadcnCourseFormProps) {
           description: "",
           level: "Beginner",
           duration: "",
+          category: "",
+          rating: "4.5",
+          students: "1000",
+          prerequisites: "",
+          syllabus: "",
+          language: "English",
+          certificate: true,
         });
         onCourseAdded?.();
       } else {
@@ -96,6 +126,13 @@ export function ShadcnCourseForm({ onCourseAdded }: ShadcnCourseFormProps) {
       description: "",
       level: "Beginner",
       duration: "",
+      category: "",
+      rating: "4.5",
+      students: "1000",
+      prerequisites: "",
+      syllabus: "",
+      language: "English",
+      certificate: true,
     });
     setError("");
     setSuccess("");
@@ -191,6 +228,124 @@ export function ShadcnCourseForm({ onCourseAdded }: ShadcnCourseFormProps) {
                   />
                 </Field>
               </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Field>
+                  <FieldLabel htmlFor="category">Category</FieldLabel>
+                  <Input
+                    id="category"
+                    name="category"
+                    value={formData.category}
+                    onChange={handleInputChange}
+                    placeholder="e.g., Web Development"
+                    required
+                    disabled={loading}
+                  />
+                </Field>
+
+                <Field>
+                  <FieldLabel htmlFor="language">Language</FieldLabel>
+                  <Input
+                    id="language"
+                    name="language"
+                    value={formData.language}
+                    onChange={handleInputChange}
+                    placeholder="e.g., English"
+                    required
+                    disabled={loading}
+                  />
+                </Field>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Field>
+                  <FieldLabel htmlFor="rating">Rating (1-5)</FieldLabel>
+                  <Input
+                    id="rating"
+                    name="rating"
+                    type="number"
+                    step="0.1"
+                    min="1"
+                    max="5"
+                    value={formData.rating}
+                    onChange={handleInputChange}
+                    required
+                    disabled={loading}
+                  />
+                </Field>
+
+                <Field>
+                  <FieldLabel htmlFor="students">Number of Students</FieldLabel>
+                  <Input
+                    id="students"
+                    name="students"
+                    type="number"
+                    min="0"
+                    value={formData.students}
+                    onChange={handleInputChange}
+                    required
+                    disabled={loading}
+                  />
+                </Field>
+              </div>
+
+              <Field>
+                <FieldLabel htmlFor="prerequisites">Prerequisites</FieldLabel>
+                <Textarea
+                  id="prerequisites"
+                  name="prerequisites"
+                  value={formData.prerequisites}
+                  onChange={handleInputChange}
+                  placeholder="Enter prerequisites separated by commas"
+                  className="resize-none"
+                  rows={2}
+                  required
+                  disabled={loading}
+                />
+                <FieldDescription>
+                  Separate each prerequisite with a comma
+                </FieldDescription>
+              </Field>
+
+              <Field>
+                <FieldLabel htmlFor="syllabus">Syllabus Topics</FieldLabel>
+                <Textarea
+                  id="syllabus"
+                  name="syllabus"
+                  value={formData.syllabus}
+                  onChange={handleInputChange}
+                  placeholder="Enter syllabus topics separated by commas"
+                  className="resize-none"
+                  rows={3}
+                  required
+                  disabled={loading}
+                />
+                <FieldDescription>
+                  Separate each topic with a comma
+                </FieldDescription>
+              </Field>
+
+              <Field>
+                <div className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    id="certificate"
+                    name="certificate"
+                    checked={formData.certificate}
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        certificate: e.target.checked,
+                      }))
+                    }
+                    disabled={loading}
+                    className="h-4 w-4 rounded border-gray-300"
+                  />
+                  <FieldLabel htmlFor="certificate" className="mb-0">
+                    Provides Certificate upon Completion
+                  </FieldLabel>
+                </div>
+              </Field>
             </FieldGroup>
           </FieldSet>
           <FieldDescription className="text-xs text-muted-foreground">

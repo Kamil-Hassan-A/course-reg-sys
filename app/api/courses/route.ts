@@ -54,10 +54,38 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const { title, instructor, description, level, duration } =
-      await request.json();
+    const {
+      title,
+      instructor,
+      description,
+      level,
+      duration,
+      category,
+      rating,
+      students,
+      prerequisites,
+      syllabus,
+      language,
+      certificate,
+      lastUpdated,
+    } = await request.json();
 
-    if (!title || !instructor || !description || !level || !duration) {
+    // Validate required fields
+    if (
+      !title ||
+      !instructor ||
+      !description ||
+      !level ||
+      !duration ||
+      !category ||
+      rating === undefined ||
+      students === undefined ||
+      !prerequisites ||
+      !syllabus ||
+      !language ||
+      certificate === undefined ||
+      !lastUpdated
+    ) {
       return NextResponse.json(
         { error: "All fields are required" },
         { status: 400 }
@@ -73,7 +101,7 @@ export async function POST(request: Request) {
 
     const thumbnail = generateThumbnail(title);
 
-    const newCourse = {
+    const newCourse: Course = {
       courseId: newCourseId,
       title,
       instructor,
@@ -82,6 +110,14 @@ export async function POST(request: Request) {
       duration,
       thumbnail,
       enrolled: false,
+      category,
+      rating,
+      students,
+      prerequisites,
+      syllabus,
+      language,
+      certificate,
+      lastUpdated,
     };
 
     db.courses.push(newCourse);

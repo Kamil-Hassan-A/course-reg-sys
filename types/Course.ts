@@ -7,4 +7,12 @@ export type Course = {
   duration: string;
   thumbnail: string;
   enrolled: boolean;
+  category: string;
+  rating: number;
+  students: number;
+  prerequisites: string[];
+  syllabus: string[];
+  language: string;
+  certificate: boolean;
+  lastUpdated: string;
 };

@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Course } from "@/types/Course";
+import Link from "next/link";
+import { Eye } from "lucide-react";
 
 interface ShadcnCardProps {
   course: Course;
@@ -112,12 +114,18 @@ export function ShadcnCourseCard({
           <Badge variant="outline">{course.duration}</Badge>
         </div>
       </CardHeader>
-      <CardFooter className="mt-auto">
+      <CardFooter className="mt-auto flex gap-2">
+        <Link href={`/courses/${course.courseId}`} className="flex-1">
+          <Button variant="outline" className="w-full">
+            <Eye className="mr-2 h-4 w-4" />
+            View Details
+          </Button>
+        </Link>
         <Button
           onClick={config.onClick}
           disabled={isLoading || config.disabled}
           variant={config.variant}
-          className="w-full"
+          className="flex-1"
         >
           {config.text}
         </Button>

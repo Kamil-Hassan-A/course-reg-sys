@@ -1,188 +1,507 @@
 {
-    "admin": {
-        "username": "admin",
-        "password": "admin123"
+  "admin": {
+    "username": "admin",
+    "password": "admin123"
+  },
+  "courses": [
+    {
+      "courseId": 1,
+      "title": "Complete JavaScript Course - Beginner to Advanced",
+      "instructor": "John Smith",
+      "description": "Master JavaScript with projects, challenges and theory. Learn modern JavaScript from scratch!",
+      "level": "Beginner",
+      "duration": "24 hours",
+      "thumbnail": "https://placehold.co/600x400/F7DF1E/000000?text=JavaScript",
+      "enrolled": true,
+      "category": "Programming",
+      "rating": 4.8,
+      "students": 12543,
+      "prerequisites": [
+        "Basic computer knowledge",
+        "Text editor installed"
+      ],
+      "syllabus": [
+        "Variables and Data Types",
+        "Functions and Scope",
+        "DOM Manipulation",
+        "Async JavaScript",
+        "ES6+ Features",
+        "Project: Build a Web App"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-15"
     },
-    "courses": [
-        {
-            "courseId": 1,
-            "title": "Complete JavaScript Course - Beginner to Advanced",
-            "instructor": "John Smith",
-            "description": "Master JavaScript with projects, challenges and theory. Learn modern JavaScript from scratch!",
-            "level": "Beginner",
-            "duration": "24 hours",
-            "thumbnail": "https://placehold.co/600x400/F7DF1E/000000?text=JavaScript",
-            "enrolled": true
-        },
-        {
-            "courseId": 2,
-            "title": "React - The Complete Guide",
-            "instructor": "Sarah Johnson",
-            "description": "Learn React from the ground up with hooks, context, and Redux.",
-            "level": "Intermediate",
-            "duration": "32 hours",
-            "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React",
-            "enrolled": true
-        },
-        {
-            "courseId": 3,
-            "title": "Python for Data Science",
-            "instructor": "Michael Williams",
-            "description": "Complete Python bootcamp covering data analysis, visualization, and machine learning basics.",
-            "level": "Beginner",
-            "duration": "28 hours",
-            "thumbnail": "https://placehold.co/600x400/3776AB/FFFFFF?text=Python",
-            "enrolled": true
-        },
-        {
-            "courseId": 4,
-            "title": "Web Design Masterclass",
-            "instructor": "Emily Davis",
-            "description": "Learn HTML, CSS, and responsive design. Build beautiful websites from scratch.",
-            "level": "Beginner",
-            "duration": "18 hours",
-            "thumbnail": "https://placehold.co/600x400/E34F26/FFFFFF?text=Web+Design",
-            "enrolled": true
-        },
-        {
-            "courseId": 5,
-            "title": "Node.js & Express - Backend Development",
-            "instructor": "David Brown",
-            "description": "Build powerful REST APIs and backend applications with Node.js and Express.",
-            "level": "Intermediate",
-            "duration": "26 hours",
-            "thumbnail": "https://placehold.co/600x400/339933/FFFFFF?text=Node.js",
-            "enrolled": false
-        },
-        {
-            "courseId": 6,
-            "title": "SQL & Database Design",
-            "instructor": "Lisa Martinez",
-            "description": "Master SQL queries, database design, and work with MySQL and PostgreSQL.",
-            "level": "Beginner",
-            "duration": "16 hours",
-            "thumbnail": "https://placehold.co/600x400/4479A1/FFFFFF?text=SQL",
-            "enrolled": true
-        },
-        {
-            "courseId": 7,
-            "title": "TypeScript Fundamentals",
-            "instructor": "Alex Thompson",
-            "description": "Learn TypeScript from basics to advanced topics. Type-safe JavaScript development.",
-            "level": "Intermediate",
-            "duration": "20 hours",
-            "thumbnail": "https://placehold.co/600x400/3178C6/FFFFFF?text=TypeScript",
-            "enrolled": false
-        },
-        {
-            "courseId": 8,
-            "title": "Machine Learning with Python",
-            "instructor": "Dr. Jennifer Lee",
-            "description": "Dive into machine learning algorithms, neural networks, and practical AI applications.",
-            "level": "Advanced",
-            "duration": "40 hours",
-            "thumbnail": "https://placehold.co/600x400/FF6F00/FFFFFF?text=Machine+Learning",
-            "enrolled": false
-        },
-        {
-            "courseId": 9,
-            "title": "Docker and Kubernetes Essentials",
-            "instructor": "Robert Chen",
-            "description": "Master containerization with Docker and orchestration with Kubernetes for modern DevOps.",
-            "level": "Intermediate",
-            "duration": "22 hours",
-            "thumbnail": "https://placehold.co/600x400/2496ED/FFFFFF?text=Docker+Kubernetes",
-            "enrolled": false
-        },
-        {
-            "courseId": 10,
-            "title": "Vue.js Complete Course",
-            "instructor": "Maria Garcia",
-            "description": "Build modern web applications with Vue.js 3, Composition API, and state management.",
-            "level": "Intermediate",
-            "duration": "28 hours",
-            "thumbnail": "https://placehold.co/600x400/42B883/FFFFFF?text=Vue.js",
-            "enrolled": false
-        },
-        {
-            "courseId": 11,
-            "title": "GraphQL API Development",
-            "instructor": "James Wilson",
-            "description": "Learn to build and consume GraphQL APIs. Modern alternative to REST.",
-            "level": "Advanced",
-            "duration": "18 hours",
-            "thumbnail": "https://placehold.co/600x400/E10098/FFFFFF?text=GraphQL",
-            "enrolled": false
-        },
-        {
-            "courseId": 12,
-            "title": "Mobile App Development with React Native",
-            "instructor": "Sophie Anderson",
-            "description": "Create cross-platform mobile apps for iOS and Android using React Native.",
-            "level": "Intermediate",
-            "duration": "35 hours",
-            "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React+Native",
-            "enrolled": false
-        },
-        {
-            "courseId": 13,
-            "title": "Cybersecurity Fundamentals",
-            "instructor": "Mark Patterson",
-            "description": "Understanding security threats, encryption, network security, and ethical hacking basics.",
-            "level": "Beginner",
-            "duration": "25 hours",
-            "thumbnail": "https://placehold.co/600x400/00A4EF/FFFFFF?text=Cybersecurity",
-            "enrolled": false
-        },
-        {
-            "courseId": 14,
-            "title": "AWS Cloud Practitioner",
-            "instructor": "Rachel Kim",
-            "description": "Master Amazon Web Services fundamentals, EC2, S3, Lambda, and cloud architecture.",
-            "level": "Beginner",
-            "duration": "30 hours",
-            "thumbnail": "https://placehold.co/600x400/FF9900/000000?text=AWS+Cloud",
-            "enrolled": false
-        },
-        {
-            "courseId": 15,
-            "title": "Advanced CSS and Sass",
-            "instructor": "Daniel Brown",
-            "description": "Master CSS Grid, Flexbox, animations, and Sass preprocessor for modern web design.",
-            "level": "Intermediate",
-            "duration": "20 hours",
-            "thumbnail": "https://placehold.co/600x400/CC6699/FFFFFF?text=CSS+Sass",
-            "enrolled": false
-        },
-        {
-            "courseId": 16,
-            "title": "MongoDB - The Complete Developer's Guide",
-            "instructor": "Thomas Miller",
-            "description": "Learn NoSQL database design, CRUD operations, aggregation, and MongoDB Atlas.",
-            "level": "Beginner",
-            "duration": "22 hours",
-            "thumbnail": "https://placehold.co/600x400/47A248/FFFFFF?text=MongoDB",
-            "enrolled": false
-        },
-        {
-            "courseId": 17,
-            "title": "Git and GitHub Masterclass",
-            "instructor": "Laura Martinez",
-            "description": "Version control with Git, collaboration with GitHub, branching strategies, and workflows.",
-            "level": "Beginner",
-            "duration": "12 hours",
-            "thumbnail": "https://placehold.co/600x400/F05032/FFFFFF?text=Git+GitHub",
-            "enrolled": false
-        },
-        {
-            "courseId": 18,
-            "title": "Next.js and Server-Side Rendering",
-            "instructor": "Kevin Zhang",
-            "description": "Build production-ready React applications with Next.js, SSR, and static generation.",
-            "level": "Advanced",
-            "duration": "26 hours",
-            "thumbnail": "https://placehold.co/600x400/000000/FFFFFF?text=Next.js",
-            "enrolled": false
-        }
-    ]
+    {
+      "courseId": 2,
+      "title": "React - The Complete Guide",
+      "instructor": "Sarah Johnson",
+      "description": "Learn React from the ground up with hooks, context, and Redux.",
+      "level": "Intermediate",
+      "duration": "32 hours",
+      "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React",
+      "enrolled": true,
+      "category": "Web Development",
+      "rating": 4.9,
+      "students": 18234,
+      "prerequisites": [
+        "JavaScript fundamentals",
+        "HTML & CSS basics"
+      ],
+      "syllabus": [
+        "React Basics",
+        "Components & Props",
+        "State & Lifecycle",
+        "Hooks Deep Dive",
+        "Context API",
+        "Redux Toolkit",
+        "Testing React Apps"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-02-10"
+    },
+    {
+      "courseId": 3,
+      "title": "Python for Data Science",
+      "instructor": "Michael Williams",
+      "description": "Complete Python bootcamp covering data analysis, visualization, and machine learning basics.",
+      "level": "Beginner",
+      "duration": "28 hours",
+      "thumbnail": "https://placehold.co/600x400/3776AB/FFFFFF?text=Python",
+      "enrolled": true,
+      "category": "Data Science",
+      "rating": 4.7,
+      "students": 15678,
+      "prerequisites": [
+        "Basic math knowledge"
+      ],
+      "syllabus": [
+        "Python Fundamentals",
+        "NumPy & Pandas",
+        "Data Visualization with Matplotlib",
+        "Statistical Analysis",
+        "Introduction to Machine Learning",
+        "Real-world Projects"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-28"
+    },
+    {
+      "courseId": 4,
+      "title": "Web Design Masterclass",
+      "instructor": "Emily Davis",
+      "description": "Learn HTML, CSS, and responsive design. Build beautiful websites from scratch.",
+      "level": "Beginner",
+      "duration": "18 hours",
+      "thumbnail": "https://placehold.co/600x400/E34F26/FFFFFF?text=Web+Design",
+      "enrolled": true,
+      "category": "Web Development",
+      "rating": 4.6,
+      "students": 9876,
+      "prerequisites": [
+        "None"
+      ],
+      "syllabus": [
+        "HTML5 Fundamentals",
+        "CSS Basics",
+        "Flexbox & Grid",
+        "Responsive Design",
+        "CSS Animations",
+        "Final Portfolio Project"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-05"
+    },
+    {
+      "courseId": 5,
+      "title": "Node.js & Express - Backend Development",
+      "instructor": "David Brown",
+      "description": "Build powerful REST APIs and backend applications with Node.js and Express.",
+      "level": "Intermediate",
+      "duration": "26 hours",
+      "thumbnail": "https://placehold.co/600x400/339933/FFFFFF?text=Node.js",
+      "enrolled": false,
+      "category": "Backend Development",
+      "rating": 4.8,
+      "students": 11234,
+      "prerequisites": [
+        "JavaScript knowledge",
+        "Basic HTTP understanding"
+      ],
+      "syllabus": [
+        "Node.js Basics",
+        "Express Framework",
+        "REST API Design",
+        "Database Integration",
+        "Authentication & Authorization",
+        "Deployment Strategies"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-02-01"
+    },
+    {
+      "courseId": 6,
+      "title": "SQL & Database Design",
+      "instructor": "Lisa Martinez",
+      "description": "Master SQL queries, database design, and work with MySQL and PostgreSQL.",
+      "level": "Beginner",
+      "duration": "16 hours",
+      "thumbnail": "https://placehold.co/600x400/4479A1/FFFFFF?text=SQL",
+      "enrolled": true,
+      "category": "Database",
+      "rating": 4.5,
+      "students": 8765,
+      "prerequisites": [
+        "Basic computer knowledge"
+      ],
+      "syllabus": [
+        "Database Fundamentals",
+        "SQL Basics",
+        "JOIN Operations",
+        "Database Design",
+        "Normalization",
+        "Advanced Queries"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2025-12-20"
+    },
+    {
+      "courseId": 7,
+      "title": "TypeScript Fundamentals",
+      "instructor": "Alex Thompson",
+      "description": "Learn TypeScript from basics to advanced topics. Type-safe JavaScript development.",
+      "level": "Intermediate",
+      "duration": "20 hours",
+      "thumbnail": "https://placehold.co/600x400/3178C6/FFFFFF?text=TypeScript",
+      "enrolled": false,
+      "category": "Programming",
+      "rating": 4.7,
+      "students": 7654,
+      "prerequisites": [
+        "JavaScript experience"
+      ],
+      "syllabus": [
+        "TypeScript Basics",
+        "Type Annotations",
+        "Interfaces & Types",
+        "Generics",
+        "Advanced Types",
+        "TypeScript with React"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-20"
+    },
+    {
+      "courseId": 8,
+      "title": "Machine Learning with Python",
+      "instructor": "Dr. Jennifer Lee",
+      "description": "Dive into machine learning algorithms, neural networks, and practical AI applications.",
+      "level": "Advanced",
+      "duration": "40 hours",
+      "thumbnail": "https://placehold.co/600x400/FF6F00/FFFFFF?text=Machine+Learning",
+      "enrolled": false,
+      "category": "Data Science",
+      "rating": 4.9,
+      "students": 6543,
+      "prerequisites": [
+        "Python programming",
+        "Statistics basics",
+        "Linear algebra"
+      ],
+      "syllabus": [
+        "ML Fundamentals",
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Neural Networks",
+        "Deep Learning",
+        "Computer Vision",
+        "NLP Basics",
+        "Capstone Project"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-02-05"
+    },
+    {
+      "courseId": 9,
+      "title": "Docker and Kubernetes Essentials",
+      "instructor": "Robert Chen",
+      "description": "Master containerization with Docker and orchestration with Kubernetes for modern DevOps.",
+      "level": "Intermediate",
+      "duration": "22 hours",
+      "thumbnail": "https://placehold.co/600x400/2496ED/FFFFFF?text=Docker+Kubernetes",
+      "enrolled": false,
+      "category": "DevOps",
+      "rating": 4.8,
+      "students": 5432,
+      "prerequisites": [
+        "Linux basics",
+        "Command line experience"
+      ],
+      "syllabus": [
+        "Docker Fundamentals",
+        "Container Management",
+        "Docker Compose",
+        "Kubernetes Architecture",
+        "Deployments & Services",
+        "Scaling Applications"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-18"
+    },
+    {
+      "courseId": 10,
+      "title": "Vue.js Complete Course",
+      "instructor": "Maria Garcia",
+      "description": "Build modern web applications with Vue.js 3, Composition API, and state management.",
+      "level": "Intermediate",
+      "duration": "28 hours",
+      "thumbnail": "https://placehold.co/600x400/42B883/FFFFFF?text=Vue.js",
+      "enrolled": false,
+      "category": "Web Development",
+      "rating": 4.6,
+      "students": 4321,
+      "prerequisites": [
+        "JavaScript fundamentals",
+        "HTML & CSS"
+      ],
+      "syllabus": [
+        "Vue Basics",
+        "Components",
+        "Composition API",
+        "Vue Router",
+        "Pinia State Management",
+        "Building Production Apps"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-02-12"
+    },
+    {
+      "courseId": 11,
+      "title": "GraphQL API Development",
+      "instructor": "James Wilson",
+      "description": "Learn to build and consume GraphQL APIs. Modern alternative to REST.",
+      "level": "Advanced",
+      "duration": "18 hours",
+      "thumbnail": "https://placehold.co/600x400/E10098/FFFFFF?text=GraphQL",
+      "enrolled": false,
+      "category": "Backend Development",
+      "rating": 4.7,
+      "students": 3210,
+      "prerequisites": [
+        "REST API knowledge",
+        "Node.js experience"
+      ],
+      "syllabus": [
+        "GraphQL Fundamentals",
+        "Schema Design",
+        "Resolvers",
+        "Mutations & Queries",
+        "Apollo Server",
+        "Client Integration"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-25"
+    },
+    {
+      "courseId": 12,
+      "title": "Mobile App Development with React Native",
+      "instructor": "Sophie Anderson",
+      "description": "Create cross-platform mobile apps for iOS and Android using React Native.",
+      "level": "Intermediate",
+      "duration": "35 hours",
+      "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React+Native",
+      "enrolled": false,
+      "category": "Mobile Development",
+      "rating": 4.8,
+      "students": 8901,
+      "prerequisites": [
+        "React knowledge",
+        "JavaScript proficiency"
+      ],
+      "syllabus": [
+        "React Native Basics",
+        "Navigation",
+        "Native Components",
+        "API Integration",
+        "State Management",
+        "Publishing Apps"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-02-08"
+    },
+    {
+      "courseId": 13,
+      "title": "Cybersecurity Fundamentals",
+      "instructor": "Mark Patterson",
+      "description": "Understanding security threats, encryption, network security, and ethical hacking basics.",
+      "level": "Beginner",
+      "duration": "25 hours",
+      "thumbnail": "https://placehold.co/600x400/00A4EF/FFFFFF?text=Cybersecurity",
+      "enrolled": true,
+      "category": "Security",
+      "rating": 4.5,
+      "students": 5678,
+      "prerequisites": [
+        "Basic networking knowledge"
+      ],
+      "syllabus": [
+        "Security Principles",
+        "Threat Landscape",
+        "Encryption Basics",
+        "Network Security",
+        "Web Security",
+        "Ethical Hacking Intro"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-30"
+    },
+    {
+      "courseId": 14,
+      "title": "AWS Cloud Practitioner",
+      "instructor": "Rachel Kim",
+      "description": "Master Amazon Web Services fundamentals, EC2, S3, Lambda, and cloud architecture.",
+      "level": "Beginner",
+      "duration": "30 hours",
+      "thumbnail": "https://placehold.co/600x400/FF9900/000000?text=AWS+Cloud",
+      "enrolled": false,
+      "category": "Cloud Computing",
+      "rating": 4.7,
+      "students": 10234,
+      "prerequisites": [
+        "Basic IT knowledge"
+      ],
+      "syllabus": [
+        "Cloud Computing Basics",
+        "AWS Core Services",
+        "EC2 & S3",
+        "Lambda Functions",
+        "Database Services",
+        "Security & Compliance"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-02-14"
+    },
+    {
+      "courseId": 15,
+      "title": "Advanced CSS and Sass",
+      "instructor": "Daniel Brown",
+      "description": "Master CSS Grid, Flexbox, animations, and Sass preprocessor for modern web design.",
+      "level": "Intermediate",
+      "duration": "20 hours",
+      "thumbnail": "https://placehold.co/600x400/CC6699/FFFFFF?text=CSS+Sass",
+      "enrolled": false,
+      "category": "Web Development",
+      "rating": 4.6,
+      "students": 6789,
+      "prerequisites": [
+        "HTML & CSS basics"
+      ],
+      "syllabus": [
+        "CSS Grid Mastery",
+        "Flexbox Deep Dive",
+        "CSS Animations",
+        "Sass Fundamentals",
+        "Advanced Layouts",
+        "Real-world Projects"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-12"
+    },
+    {
+      "courseId": 16,
+      "title": "MongoDB - The Complete Developer's Guide",
+      "instructor": "Thomas Miller",
+      "description": "Learn NoSQL database design, CRUD operations, aggregation, and MongoDB Atlas.",
+      "level": "Beginner",
+      "duration": "22 hours",
+      "thumbnail": "https://placehold.co/600x400/47A248/FFFFFF?text=MongoDB",
+      "enrolled": false,
+      "category": "Database",
+      "rating": 4.6,
+      "students": 7123,
+      "prerequisites": [
+        "Basic programming knowledge"
+      ],
+      "syllabus": [
+        "NoSQL Concepts",
+        "MongoDB Basics",
+        "CRUD Operations",
+        "Data Modeling",
+        "Aggregation Framework",
+        "MongoDB Atlas"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-01-22"
+    },
+    {
+      "courseId": 17,
+      "title": "Git and GitHub Masterclass",
+      "instructor": "Laura Martinez",
+      "description": "Version control with Git, collaboration with GitHub, branching strategies, and workflows.",
+      "level": "Beginner",
+      "duration": "12 hours",
+      "thumbnail": "https://placehold.co/600x400/F05032/FFFFFF?text=Git+GitHub",
+      "enrolled": true,
+      "category": "Development Tools",
+      "rating": 4.8,
+      "students": 14567,
+      "prerequisites": [
+        "Basic command line knowledge"
+      ],
+      "syllabus": [
+        "Git Fundamentals",
+        "Branching & Merging",
+        "GitHub Basics",
+        "Collaboration Workflows",
+        "Advanced Git",
+        "Best Practices"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-02-01"
+    },
+    {
+      "courseId": 18,
+      "title": "Next.js and Server-Side Rendering",
+      "instructor": "Kevin Zhang",
+      "description": "Build production-ready React applications with Next.js, SSR, and static generation.",
+      "level": "Advanced",
+      "duration": "26 hours",
+      "thumbnail": "https://placehold.co/600x400/000000/FFFFFF?text=Next.js",
+      "enrolled": false,
+      "category": "Web Development",
+      "rating": 4.9,
+      "students": 9876,
+      "prerequisites": [
+        "React proficiency",
+        "Node.js basics"
+      ],
+      "syllabus": [
+        "Next.js Fundamentals",
+        "Pages & Routing",
+        "Server-Side Rendering",
+        "Static Generation",
+        "API Routes",
+        "Optimization & Deployment"
+      ],
+      "language": "English",
+      "certificate": true,
+      "lastUpdated": "2026-02-18"
+    }
+  ]
 }
