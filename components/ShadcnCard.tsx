@@ -14,14 +14,12 @@ import { Course } from "@/types/Course";
 
 interface ShadcnCardProps {
   course: Course;
-  enrollmentId?: number;
   onActionComplete?: () => void;
   actionType?: "enroll" | "unenroll";
 }
 
 export function ShadcnCard({ 
   course, 
-  enrollmentId,
   onActionComplete,
   actionType = "enroll" 
 }: ShadcnCardProps) {
@@ -30,12 +28,8 @@ export function ShadcnCard({
   const handleEnroll = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch("/api/enroll", {
+      const response = await fetch(`/api/enroll/${course.courseId}`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ courseId: course.courseId }),
       });
 
       const data = await response.json();
@@ -61,12 +55,8 @@ export function ShadcnCard({
 
     setIsLoading(true);
     try {
-      const response = await fetch("/api/enroll", {
+      const response = await fetch(`/api/enroll/${course.courseId}`, {
         method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ enrollmentId }),
       });
 
       const data = await response.json();
@@ -88,13 +78,15 @@ export function ShadcnCard({
   const buttonConfig = {
     enroll: {
       onClick: handleEnroll,
-      text: isLoading ? "Enrolling..." : "Enroll Now",
+      text: isLoading ? "Enrolling..." : course.enrolled ? "Already Enrolled" : "Enroll Now",
       variant: "default" as const,
+      disabled: course.enrolled,
     },
     unenroll: {
       onClick: handleUnenroll,
       text: isLoading ? "Cancelling..." : "Cancel Enrollment",
       variant: "destructive" as const,
+      disabled: false,
     },
   };
 
@@ -119,7 +111,7 @@ export function ShadcnCard({
       <CardFooter className="mt-auto">
         <Button
           onClick={config.onClick}
-          disabled={isLoading}
+          disabled={isLoading || config.disabled}
           variant={config.variant}
           className="w-full"
         >

@@ -7,7 +7,8 @@
             "description": "Master JavaScript with projects, challenges and theory. Learn modern JavaScript from scratch!",
             "level": "Beginner",
             "duration": "24 hours",
-            "thumbnail": "https://placehold.co/600x400/F7DF1E/000000?text=JavaScript"
+            "thumbnail": "https://placehold.co/600x400/F7DF1E/000000?text=JavaScript",
+            "enrolled": true
         },
         {
             "courseId": 2,
@@ -16,7 +17,8 @@
             "description": "Learn React from the ground up with hooks, context, and Redux.",
             "level": "Intermediate",
             "duration": "32 hours",
-            "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React"
+            "thumbnail": "https://placehold.co/600x400/61DAFB/000000?text=React",
+            "enrolled": true
         },
         {
             "courseId": 3,
@@ -25,7 +27,8 @@
             "description": "Complete Python bootcamp covering data analysis, visualization, and machine learning basics.",
             "level": "Beginner",
             "duration": "28 hours",
-            "thumbnail": "https://placehold.co/600x400/3776AB/FFFFFF?text=Python"
+            "thumbnail": "https://placehold.co/600x400/3776AB/FFFFFF?text=Python",
+            "enrolled": false
         },
         {
             "courseId": 4,
@@ -34,7 +37,8 @@
             "description": "Learn HTML, CSS, and responsive design. Build beautiful websites from scratch.",
             "level": "Beginner",
             "duration": "18 hours",
-            "thumbnail": "https://placehold.co/600x400/E34F26/FFFFFF?text=Web+Design"
+            "thumbnail": "https://placehold.co/600x400/E34F26/FFFFFF?text=Web+Design",
+            "enrolled": true
         },
         {
             "courseId": 5,
@@ -43,7 +47,8 @@
             "description": "Build powerful REST APIs and backend applications with Node.js and Express.",
             "level": "Intermediate",
             "duration": "26 hours",
-            "thumbnail": "https://placehold.co/600x400/339933/FFFFFF?text=Node.js"
+            "thumbnail": "https://placehold.co/600x400/339933/FFFFFF?text=Node.js",
+            "enrolled": true
         },
         {
             "courseId": 6,
@@ -52,7 +57,8 @@
             "description": "Master SQL queries, database design, and work with MySQL and PostgreSQL.",
             "level": "Beginner",
             "duration": "16 hours",
-            "thumbnail": "https://placehold.co/600x400/4479A1/FFFFFF?text=SQL"
+            "thumbnail": "https://placehold.co/600x400/4479A1/FFFFFF?text=SQL",
+            "enrolled": true
         }
     ]
 }

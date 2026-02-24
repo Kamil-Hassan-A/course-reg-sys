@@ -6,4 +6,5 @@ export type Course = {
   level: string;
   duration: string;
   thumbnail: string;
+  enrolled: boolean;
 };

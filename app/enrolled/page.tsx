@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { EnrolledCourse } from "@/types/EnrolledCourse";
+import { Course } from "@/types/Course";
 import { ShadcnCard } from "@/components/ShadcnCard";
 
 export default function EnrolledPage() {
-  const [enrolledCourses, setEnrolledCourses] = useState<EnrolledCourse[]>([]);
+  const [enrolledCourses, setEnrolledCourses] = useState<Course[]>([]);
 
   const fetchEnrolledCourses = async () => {
     try {
@@ -34,15 +34,14 @@ export default function EnrolledPage() {
   }
 
   return (
-    <div className="p-6 max-w-7xl mx-auto">
+    <div className="p-6 max-w-7xl mx-auto min-h-screen">
       <h1 className="text-3xl font-bold mb-6">My Enrolled Courses</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {enrolledCourses.map((enrolled) => (
+        {enrolledCourses.map((course) => (
           <ShadcnCard
-            key={enrolled.enrollmentId}
-            course={enrolled.course}
-            enrollmentId={enrolled.enrollmentId}
+            key={course.courseId}
+            course={course}
             actionType="unenroll"
             onActionComplete={fetchEnrolledCourses}
           />
