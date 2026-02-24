@@ -15,7 +15,7 @@ export default function Home() {
           <Link href="/courses">
             <Button>Browse Courses</Button>
           </Link>
-          <Link href="/enroll">
+          <Link href="/enrolled">
             <Button variant="outline">My Courses</Button>
           </Link>
         </div>
