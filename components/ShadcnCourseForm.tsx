@@ -64,8 +64,6 @@ export function ShadcnCourseForm({ onCourseAdded }: ShadcnCourseFormProps) {
     setSuccess("");
 
     try {
-      const token = localStorage.getItem("adminToken");
-      
       const courseData = {
         ...formData,
         rating: parseFloat(formData.rating),
@@ -85,8 +83,8 @@ export function ShadcnCourseForm({ onCourseAdded }: ShadcnCourseFormProps) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
         },
+        credentials: "include",
         body: JSON.stringify(courseData),
       });
 

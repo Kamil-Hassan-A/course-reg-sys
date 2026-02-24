@@ -26,25 +26,32 @@ export default function AdminDashboard() {
   const handleLogout = async () => {
     try {
       await fetch("/api/admin/logout", { method: "POST" });
-      localStorage.removeItem("adminToken");
       router.push("/admin/login");
     } catch (err) {
       console.error("Logout error:", err);
       // Still redirect even if API call fails
-      localStorage.removeItem("adminToken");
       router.push("/admin/login");
     }
   };
 
   useEffect(() => {
-    // Check if user is authenticated
-    const token = localStorage.getItem("adminToken");
-    if (!token) {
-      router.push("/admin/login");
-    } else {
-      setIsAuthenticated(true);
-      fetchCourses();
-    }
+    // Check if user is authenticated via cookie
+    const checkAuth = async () => {
+      try {
+        const response = await fetch("/api/admin/check");
+        if (response.ok) {
+          setIsAuthenticated(true);
+          fetchCourses();
+        } else {
+          router.push("/admin/login");
+        }
+      } catch (err) {
+        console.error("Auth check failed:", err);
+        router.push("/admin/login");
+      }
+    };
+
+    checkAuth();
   }, [router]);
 
   if (!isAuthenticated) {

@@ -17,14 +17,13 @@ export async function POST(request: Request) {
       const cookieStore = await cookies();
       cookieStore.set("adminToken", token, {
         httpOnly: true,
-        secure: true,
+        secure: process.env.NODE_ENV === "production",
         sameSite: "lax",
         maxAge: 60 * 60 * 24, // 1 day
       });
 
       return NextResponse.json({
         success: true,
-        token,
         message: "Login successful",
       });
     } else {
