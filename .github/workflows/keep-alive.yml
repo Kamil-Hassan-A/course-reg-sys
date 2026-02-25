@@ -1,0 +1,38 @@
+name: Keep Render Instance Alive
+
+on:
+  schedule:
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Ping health endpoint
+        run: |
+          # Replace YOUR_RENDER_URL with your actual Render deployment URL
+          # Example: https://your-app.onrender.com
+          HEALTH_URL="https://course-reg-sys.onrender.com/api/health"
+          
+          echo "Pinging $HEALTH_URL at $(date)"
+          echo "----------------------------------------"
+          
+          # Get both response body and status code
+          response=$(curl -s -w "\n%{http_code}" "$HEALTH_URL")
+          http_code=$(echo "$response" | tail -n1)
+          body=$(echo "$response" | sed '$d')
+          
+          echo "HTTP Status: $http_code"
+          echo "Response Body:"
+          echo "$body" | jq '.' || echo "$body"
+          echo "----------------------------------------"
+          
+          if [ "$http_code" = "200" ]; then
+            echo "✓ Health check successful"
+          else
+            echo "✗ Health check failed"
+            exit 1
+          fi
